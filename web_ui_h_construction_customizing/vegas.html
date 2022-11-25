@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <link rel="stylesheet" href="css/vg.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+</head>
+<body>
+    <div id="content">
+        <h1>FullScreen Background Image</h1>
+        <p>
+            <strong>
+                <a href="http://vegas.jaysalvat.com">
+                    Vegas.js
+                </a>
+            </strong>
+            남율건설
+        </p>
+    </div>
+    <script src="javascript/jquery-2.2.4.min.js"></script>
+    <script src="javascript/vegas.min.js"></script>
+    <script>
+        $(function(){
+        //     $('body').vegas({
+        // delay: 3000,
+        // slides: [
+        // { src: 'images/nature-1.jpg' },
+        // { src: 'images/nature-2.jpg' },
+    //     // { src: 'images/nature-3.jpg' },
+    // ]
+// });
+
+// body 전체에 vegas를 적용합니다
+$('body').vegas({
+    slides: [
+        {   src: 'images/bg1.jpg' },
+        {   src: 'images/bg2.jpg' },
+        {   src: 'images/shortcut.jpg',
+            video: {
+                src: [
+                    'images/video.mp4',
+                ],
+                // loop값이 true일 경우 무한반복됩니다
+                loop: true,
+                // mute값이 true일 경우 음소거됩니다
+                mute: true
+            }
+        }
+    ]
+});
+        })
+    </script>
+</body>
+</html>

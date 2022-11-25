@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남율건설</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.bxslider - 복사본.css">
+    <!-- <link rel="stylesheet" href="css/vegas.min.css">l -->
+    <!-- <script src="javascript/vegas.min.js"></script> -->
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <!-- <script src="javascript/jquery-2.2.4.min.js"></script> -->
+    <!-- defer 속성은 script가 잠깐 지연 되도록 하여 -->
+    <!-- HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+    <script src="javascript/jquery.cookie.js"></script>
+    <script src="javascript/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b519985ed8f40e3377c1b0ac1c7a7e69"></script>
+</head>
+<body>
+    
+
+    <div class="wrapper">
+    <header>
+        <!-- .top은 .logo와 .menu를 묶어줌 -->
+        <div class="top">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <ul class="navi">
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#">사업영역</a>
+                    <ul class="submenu">
+                        <li><a href="#">주택사업</a></li>
+                        <li><a href="#">건축사업</a></li>
+                        <li><a href="#">인테리어</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="#">입주정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주캘린더</a></li>
+                            <li><a href="#">입주모임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul class="submenu">
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="#">기술교육</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- .bodywrap은 .imgslide와 .contents를 묶어줌 -->
+    <div class="bodywrap">
+        <div class="contents">
+            <div id="map" style="width:100%;height:350px;"></div>
+
+
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+
+// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+// marker.setMap(null);    
+</script>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+
+    <footer>
+        <div class="copy">
+            COPYRIGHT ©	by WEBDESIGN. ALL RIGHTS RESERVED
+        </div>
+        <div class="site">
+            <div class="btmenu">
+                <ul>
+                    <li><a href="#">하단메뉴1</a></li>
+                    <li><a href="#">하단메뉴2</a></li>
+                    <li><a href="#">하단메뉴3</a></li>
+                </ul>
+            </div>
+            <div class="familysite">
+                <select name="sitelist">
+                    <option value="#">패밀리사이트1</option>
+                    <option value="#">패밀리사이트2</option>
+                    <option value="#">패밀리사이트3</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
